@@ -8,7 +8,7 @@ public class FinchBeakControl : MonoBehaviour
     public Sprite BeakClosedSprite;
     public Sprite BeakOpenSprite;
     public GameObject seed;
-    public static readonly Vector3 offset = new Vector3(1.5f, 0.08f, -0.1f);
+    public static readonly Vector3 offset = new Vector3(-1.5f, -0.08f, 0f);
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class FinchBeakControl : MonoBehaviour
             {
                 if (seed.GetComponent<SeedControl>().state == SeedControl.IN_BUSH)
                 {
-                    float distance = Vector3.Distance(transform.position - offset, seed.transform.position);
+                    float distance = Vector3.Distance(transform.position + offset, seed.transform.position);
                     if (distance < closestDistance)
                     {
                         closestSeed = seed;

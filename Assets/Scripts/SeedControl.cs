@@ -13,7 +13,7 @@ public class SeedControl : MonoBehaviour
 
     public string size;
     public float speed;
-    public int timeUntilFalling = 3600;
+    public float timeToFall;
     public int state;
     private Rigidbody2D rigidbody2D;
     private GameObject finch;
@@ -23,7 +23,7 @@ public class SeedControl : MonoBehaviour
         this.finch = finch;
         if (finch)
         {
-            UpdateState(IN_BEAK, 100);
+            UpdateState(IN_BEAK, 5);
         }
         else
         {
@@ -31,24 +31,24 @@ public class SeedControl : MonoBehaviour
         }
     }
 
-    public void UpdateState(int state, int timeUntilFalling)
+    public void UpdateState(int state, int timeToFall)
     {
         this.state = state;
         if (state == IN_BUSH)
         {
-            this.timeUntilFalling = timeUntilFalling;
+            this.timeToFall = timeToFall;
             rigidbody2D.gravityScale = 0;
             rigidbody2D.velocity = Vector2.zero;
         }
         if (state == IN_BEAK)
         {
-            this.timeUntilFalling = timeUntilFalling;
+            this.timeToFall = timeToFall;
             rigidbody2D.gravityScale = 0;
             rigidbody2D.velocity = Vector2.zero;
         }
         if (state == IN_NEST)
         {
-            this.timeUntilFalling = timeUntilFalling;
+            this.timeToFall = timeToFall;
             rigidbody2D.gravityScale = 0;
             rigidbody2D.velocity = Vector2.zero;
         }
@@ -56,7 +56,7 @@ public class SeedControl : MonoBehaviour
         {
             rigidbody2D.gravityScale = 1;
         }
-        //Debug.Log("UPDATE STATE!\nState " + state + ", timeUntilFalling " + timeUntilFalling);
+        //Debug.Log("UPDATE STATE!\nState " + state + ", timeToFall " + timeToFall);
     }
 
     
@@ -76,19 +76,16 @@ public class SeedControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (state == FALLING)
+        if (state == IN_BEAK)
         {
-            timeUntilFalling--;
-            if (timeUntilFalling < 0)
+            timeToFall -= Time.deltaTime;
+            if (timeToFall < 0)
             {
                 UpdateState(FALLING, 0);
             }
-        }
-        
-        if (state == IN_BEAK)
-        {
+
             Vector3 finchPos = finch.transform.position;
-            transform.position = finchPos - FinchBeakControl.offset;
+            transform.position = finchPos + FinchBeakControl.offset;
         }
     }
 

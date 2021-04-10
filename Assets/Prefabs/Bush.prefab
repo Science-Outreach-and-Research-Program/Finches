@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443267391607414472}
   - component: {fileID: 8668223605386369050}
+  - component: {fileID: -6227101289949233990}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3898708627717207668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0133569, y: 1.000248, z: -1.8933082}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7df8185f7d7fae14c8fa764683bffcba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,3 +83,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6227101289949233990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898708627717207668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bc04543f4909a4c9133845ea989aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  largeSeed: {fileID: 4090263923714855094, guid: 4d659a77ce62e424bb71e03834253489, type: 3}
+  mediumSeed: {fileID: 3623182986583241411, guid: 2cdd48978949d7f45a01ac59031a8038, type: 3}
+  smallSeed: {fileID: 1163339744264692037, guid: 3604fb5a19e36b34a9fc7c833a09945a, type: 3}

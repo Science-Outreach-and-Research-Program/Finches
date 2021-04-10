@@ -7,7 +7,7 @@ public class BushControl : MonoBehaviour
     private const float spawnRangeHor = 2f;
     private const float spawnRangeVer = 1.5f;
     private const int maxSeeds = 5;
-    private int timeToSpawn;
+    private float timeToSpawn;
     private int currSeeds;
     private GameObject[] seeds;
     public GameObject largeSeed;
@@ -27,7 +27,7 @@ public class BushControl : MonoBehaviour
         {
             seeds[i] = spawnSeed();
         }
-        timeToSpawn = 3600;
+        timeToSpawn = 3;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class BushControl : MonoBehaviour
     {
         if (currSeeds < maxSeeds)
         {
-            timeToSpawn--;
+            timeToSpawn -= Time.deltaTime;
             if (timeToSpawn < 0)
             {
                 for (var i = 0; i < maxSeeds; i++)
@@ -46,7 +46,7 @@ public class BushControl : MonoBehaviour
                         break;
                     }
                 }
-                timeToSpawn = 3600;
+                timeToSpawn = 3;
             }
         }
         
@@ -57,7 +57,7 @@ public class BushControl : MonoBehaviour
         float spawnX = transform.position.x + Random.Range(-spawnRangeHor, spawnRangeHor);
         float spawnY = transform.position.y + Random.Range(-spawnRangeVer, spawnRangeVer);
         currSeeds++;
-        return Instantiate(largeSeed, new Vector3(spawnX, spawnY, -0.1f), Quaternion.identity);
+        return Instantiate(largeSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
     }
 
     public void removeSeed(GameObject seed)
