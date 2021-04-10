@@ -56,7 +56,7 @@ public class SeedControl : MonoBehaviour
         {
             rigidbody2D.gravityScale = 1;
         }
-        Debug.Log("UPDATE STATE!\nState " + state + ", timeUntilFalling " + timeUntilFalling);
+        //Debug.Log("UPDATE STATE!\nState " + state + ", timeUntilFalling " + timeUntilFalling);
     }
 
     
@@ -90,5 +90,10 @@ public class SeedControl : MonoBehaviour
             Vector3 finchPos = finch.transform.position;
             transform.position = finchPos - FinchBeakControl.offset;
         }
+    }
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

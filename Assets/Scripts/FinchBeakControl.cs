@@ -32,15 +32,21 @@ public class FinchBeakControl : MonoBehaviour
             float closestDistance = 1;
             foreach (GameObject seed in seeds)
             {
-                float distance = Vector3.Distance(transform.position - offset, seed.transform.position);
-                if (distance < closestDistance)
+                if (seed.GetComponent<SeedControl>().state == SeedControl.IN_BUSH)
                 {
-                    closestSeed = seed;
+                    float distance = Vector3.Distance(transform.position - offset, seed.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestSeed = seed;
+                    }
                 }
+                
             }
             this.seed = closestSeed;
             if (seed)
             {
+                GameObject bush = GameObject.Find("Bush");
+                bush.GetComponent<BushControl>().removeSeed(seed);
                 // seed.GetComponent<SeedControl>().UpdateState(SeedControl.IN_BEAK, 100);
                 seed.GetComponent<SeedControl>().SetFinch(gameObject);
                 Debug.Log("calling SeedControl.UpdateState");
