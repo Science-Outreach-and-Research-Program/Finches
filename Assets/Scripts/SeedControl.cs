@@ -11,7 +11,7 @@ public class SeedControl : MonoBehaviour
     public const int IN_NEST = 2;
     public const int FALLING = 3;
 
-
+    public string size;
     public float speed;
     public int timeUntilFalling = 3600;
     public int state;
@@ -65,7 +65,7 @@ public class SeedControl : MonoBehaviour
     void Start()
     {
         speed = 10f;
-        QualitySettings.vSyncCount = 1;
+        // QualitySettings.vSyncCount = 1;
 
         rigidbody2D = GetComponent<Rigidbody2D>();
         UpdateState(IN_BUSH, 3600);
