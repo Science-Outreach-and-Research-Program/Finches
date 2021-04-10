@@ -1,0 +1,48 @@
+Finches TODO
+
+Nest Script - attached to Nest prefabs
+    - destroy Seeds on collision
+    - count Seeds caught in this manner
+
+NPC Script - attached to NPC Finch prefabs
+    - target() to find a seed to try to pickup
+    - reference to targetted seed
+    - move towards seed as long as it's available
+    - target() again if seed becomes unavailable or no current target
+
+(maybe) Time Script - attached to Clock object
+    - display remaining time for time trials
+
+Level Design
+    - Player chooses Finch at start
+    - Round One: Small seed island. Player is alone.
+        Includes: One small seed bush, one Player Finch, one Nest
+    - Round Two: Small seed island if enough seeds collected in R1.
+                 Big seed island if not enough seeds.
+                 Competition, one or more other NPCs.
+        Includes: One bush (small or large), one Player Finch, one+ NPC Finch, Nest for each Finch
+
+
+
+Finches COMPLETED
+
+Seed Script - attached to Seed prefabs
+    - state variables (on bush, picked up, etc.)
+    - gravity control based on state
+    - (maybe) type of seed
+
+Pickup Script - attached to Finch prefabs
+    - reference to seed being held
+    - update seed's position as Finch moves
+    - drop seed when beak opens or after random duration
+    - (maybe) reference Finch's own Nest
+
+Control Script - attached to player Finch prefabs
+    - player movement control
+    - beak control
+    - call functions from Pickup Script
+
+Bush Script - attached to Bush prefabs
+    - variable for type of Seed spawned
+    - spawn Seeds at random position
+    - maintain Seeds' onBush variable
