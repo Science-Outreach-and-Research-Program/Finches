@@ -93,11 +93,15 @@ public class SeedControl : MonoBehaviour
     {
         if (other.gameObject.name == "Nest")
         {
-            Debug.Log("Trigger entered");
+            Debug.Log("(Seed) Trigger entered with speed: " + rigidbody2D.velocity.y);
+            if (rigidbody2D.velocity.y > -6)
+            {
+                UpdateState(IN_NEST, 100);
+                Debug.Log("(Seed) caught by nest");
+            }
+            Debug.Log("(Seed) too fast to be caught by nest");
             //GetComponent<CapsuleCollider2D>().isTrigger = false;
-            UpdateState(IN_NEST, 100);
         }
-        
     }
 
     void OnBecameInvisible()

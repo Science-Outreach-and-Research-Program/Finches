@@ -24,7 +24,7 @@ public class NestControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Seed")
         {
-            Debug.Log("Trigger entered");
+            Debug.Log("(Nest) Trigger entered");
             //GetComponent<CapsuleCollider2D>().isTrigger = false;
             count += 1;
             score.text = "Seeds: " + count;
