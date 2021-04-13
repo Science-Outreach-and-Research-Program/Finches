@@ -824,6 +824,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 4264725758810210395, guid: b4e42b3fb6440be448fea1b6570bdf8c, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264725758810210395, guid: b4e42b3fb6440be448fea1b6570bdf8c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264725758810210395, guid: b4e42b3fb6440be448fea1b6570bdf8c, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5666640190374314870, guid: b4e42b3fb6440be448fea1b6570bdf8c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
