@@ -50,6 +50,7 @@ MonoBehaviour:
   speed: 10
   timeToFall: 0
   state: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!50 &-1009779970317354035
 Rigidbody2D:
   serializedVersion: 4
@@ -110,7 +111,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -2
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.764151, g: 0.22633296, b: 0, a: 1}
   m_FlipX: 0
