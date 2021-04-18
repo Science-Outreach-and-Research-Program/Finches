@@ -46,7 +46,7 @@ public class BushControl : MonoBehaviour
                         break;
                     }
                 }
-                timeToSpawn = 3;
+                timeToSpawn = 3f;
             }
         }
         

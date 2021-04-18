@@ -17,9 +17,11 @@ public class SeedControl : MonoBehaviour
     public int state;
     private Rigidbody2D rigidbody2D;
     private GameObject finch;
+    public Vector3 offset;
     
-    public void SetFinch(GameObject finch)
+    public void SetFinch(GameObject finch, Vector3 offset)
     {
+        this.offset = offset;
         this.finch = finch;
         if (finch)
         {
@@ -85,13 +87,13 @@ public class SeedControl : MonoBehaviour
             }
 
             Vector3 finchPos = finch.transform.position;
-            transform.position = finchPos + FinchBeakControl.offset;
+            transform.position = finchPos + offset;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Nest")
+        if (other.gameObject.tag == "Nest")
         {
             Debug.Log("(Seed) Trigger entered with speed: " + rigidbody2D.velocity.y);
             if (rigidbody2D.velocity.y > -6)

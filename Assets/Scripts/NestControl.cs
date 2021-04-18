@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class NestControl : MonoBehaviour
 {
-    public Text score;
+    //public Text score;
     private int count;
+    private TextMesh scoreDisplay;
     // Start is called before the first frame update
     void Start()
     {
         count = 0;
-        score.text = "Seeds: " + count;
+        scoreDisplay = GetComponentInChildren<TextMesh>();
+        scoreDisplay.text = "Seeds: " + count;
+        // score.text = "Seeds: " + count;
     }
 
     // Update is called once per frame
@@ -27,7 +30,8 @@ public class NestControl : MonoBehaviour
             Debug.Log("(Nest) Trigger entered");
             //GetComponent<CapsuleCollider2D>().isTrigger = false;
             count += 1;
-            score.text = "Seeds: " + count;
+            scoreDisplay.text = "Seeds: " + count;
+            //score.text = "Seeds: " + count;
         }
 
     }

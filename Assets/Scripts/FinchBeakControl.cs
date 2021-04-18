@@ -38,6 +38,7 @@ public class FinchBeakControl : MonoBehaviour
                     if (distance < closestDistance)
                     {
                         closestSeed = seed;
+                        closestDistance = distance;
                     }
                 }
                 
@@ -48,7 +49,7 @@ public class FinchBeakControl : MonoBehaviour
                 GameObject bush = GameObject.Find("Bush");
                 bush.GetComponent<BushControl>().removeSeed(seed);
                 // seed.GetComponent<SeedControl>().UpdateState(SeedControl.IN_BEAK, 100);
-                seed.GetComponent<SeedControl>().SetFinch(gameObject);
+                seed.GetComponent<SeedControl>().SetFinch(gameObject, offset);
                 Debug.Log("calling SeedControl.UpdateState");
             }
             else
@@ -65,7 +66,7 @@ public class FinchBeakControl : MonoBehaviour
             if (seed)
             {
                 // seed.GetComponent<SeedControl>().UpdateState(SeedControl.FALLING, 0);
-                seed.GetComponent<SeedControl>().SetFinch(null);
+                seed.GetComponent<SeedControl>().SetFinch(null, Vector3.zero);
                 seed = null;
             }
         }
