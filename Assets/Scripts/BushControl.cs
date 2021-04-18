@@ -13,6 +13,9 @@ public class BushControl : MonoBehaviour
     public GameObject largeSeed;
     public GameObject mediumSeed;
     public GameObject smallSeed;
+    public float largeSpawnRate;
+    public float mediumSpawnRate;
+    public float smallSpawnRate;
     
 
     // Start is called before the first frame update
@@ -57,6 +60,7 @@ public class BushControl : MonoBehaviour
         float spawnX = transform.position.x + Random.Range(-spawnRangeHor, spawnRangeHor);
         float spawnY = transform.position.y + Random.Range(-spawnRangeVer, spawnRangeVer);
         currSeeds++;
+        // add in random seed type here
         return Instantiate(largeSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
     }
 
