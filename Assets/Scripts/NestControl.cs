@@ -35,4 +35,9 @@ public class NestControl : MonoBehaviour
         }
 
     }
+
+    public int GetScore()
+    {
+        return count;
+    }
 }

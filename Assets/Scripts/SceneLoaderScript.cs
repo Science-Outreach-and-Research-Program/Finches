@@ -23,11 +23,17 @@ public class SceneLoaderScript : MonoBehaviour
             {
                 f.SetActive(false);
             }
+            
         }
     }
 
     public void LoadRoundOne(string playerFinch)
     {
-        StartCoroutine(LoadScene("RoundOne",playerFinch));
+        StartCoroutine(LoadScene("RoundOne", playerFinch));
+    }
+
+    public void LoadRoundTwo(string playerFinch)
+    {
+        StartCoroutine(LoadScene("RoundTwo", playerFinch));
     }
 }
