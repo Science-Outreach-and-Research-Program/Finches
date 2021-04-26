@@ -28,8 +28,18 @@ public class NestControl : MonoBehaviour
         if (other.gameObject.tag == "Seed")
         {
             Debug.Log("(Nest) Trigger entered");
+            if (other.GetComponent<Rigidbody2D>().velocity.y > -8)
+            {
+                other.GetComponent<SeedControl>().UpdateState(SeedControl.IN_NEST, 100);
+                Debug.Log("(Seed) caught by nest");
+                count += 1;
+            }
+            else
+            {
+                Debug.Log("(Seed) too fast to be caught by nest");
+            }
             //GetComponent<CapsuleCollider2D>().isTrigger = false;
-            count += 1;
+            
             scoreDisplay.text = "Seeds: " + count;
             //score.text = "Seeds: " + count;
         }
