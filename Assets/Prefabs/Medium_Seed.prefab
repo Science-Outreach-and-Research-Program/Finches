@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b3eefe46be28842b240a8a7e2deabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: medium
   speed: 10
   timeToFall: 0
+  size: 1
   state: 0
   offset: {x: 0, y: 0, z: 0}
 --- !u!50 &8896617604907211192

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 71535418890550060}
   - component: {fileID: 4632795890959589522}
   - component: {fileID: 2862980767298454758}
+  - component: {fileID: -2967313513449438804}
   m_Layer: 0
   m_Name: Large_Beak_NPC
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
   nest: {fileID: 0}
   BeakClosedSprite: {fileID: 21300000, guid: 1b9d8869735925e4faa1cba74ddc8ea7, type: 3}
   BeakOpenSprite: {fileID: 21300000, guid: 1d8d455abfba42444822d48dad28f11b, type: 3}
+--- !u!114 &-2967313513449438804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007990741391610863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27cbf060cab4ab4db6e28f242869d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 2

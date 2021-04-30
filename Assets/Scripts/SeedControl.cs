@@ -11,9 +11,13 @@ public class SeedControl : MonoBehaviour
     public const int IN_NEST = 2;
     public const int FALLING = 3;
 
-    public string size;
+    public const int SMALL = 0;
+    public const int MEDIUM = 1;
+    public const int LARGE = 2;
+    
     public float speed;
     public float timeToFall;
+    public int size;
     public int state;
     private Rigidbody2D rigidbody2D;
     private GameObject finch;
@@ -25,7 +29,14 @@ public class SeedControl : MonoBehaviour
         this.finch = finch;
         if (finch)
         {
-            UpdateState(IN_BEAK, 5);
+            int sizeDiff = this.size - finch.GetComponent<BeakSize>().size;
+            float timeToFall = (Random.Range(2f, 3f) - sizeDiff) / 2;
+            // sizeDiff | timeToFall
+            // ---------+-----------
+            // 0        | 1 - 1.5
+            // 1        | .5 - 1
+            // 2        | 0 - .5
+            UpdateState(IN_BEAK, timeToFall);
         }
         else
         {
@@ -33,7 +44,7 @@ public class SeedControl : MonoBehaviour
         }
     }
 
-    public void UpdateState(int state, int timeToFall)
+    public void UpdateState(int state, float timeToFall)
     {
         this.state = state;
         if (state == IN_BUSH)
@@ -57,6 +68,8 @@ public class SeedControl : MonoBehaviour
         if (state == FALLING)
         {
             rigidbody2D.gravityScale = 1;
+            this.finch.GetComponent<FinchBeakControl>().seed = null;
+            this.finch = null;
         }
         //Debug.Log("UPDATE STATE!\nState " + state + ", timeToFall " + timeToFall);
     }
@@ -85,9 +98,11 @@ public class SeedControl : MonoBehaviour
             {
                 UpdateState(FALLING, 0);
             }
-
-            Vector3 finchPos = finch.transform.position;
-            transform.position = finchPos + offset;
+            else
+            {
+                Vector3 finchPos = finch.transform.position;
+                transform.position = finchPos + offset;
+            }
         }
     }
 

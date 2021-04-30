@@ -8,6 +8,7 @@ public class FinchBeakControl : MonoBehaviour
     public Sprite BeakClosedSprite;
     public Sprite BeakOpenSprite;
     public GameObject seed;
+
     public static readonly Vector3 offset = new Vector3(-1.5f, -0.08f, 0f);
 
     // Start is called before the first frame update
@@ -67,7 +68,6 @@ public class FinchBeakControl : MonoBehaviour
             {
                 // seed.GetComponent<SeedControl>().UpdateState(SeedControl.FALLING, 0);
                 seed.GetComponent<SeedControl>().SetFinch(null, Vector3.zero);
-                seed = null;
             }
         }
     }

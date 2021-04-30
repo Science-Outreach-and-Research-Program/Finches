@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4081236365263838746}
   - component: {fileID: 8115440270055764157}
   - component: {fileID: 8579679078055592461}
+  - component: {fileID: -8411678081835655428}
   m_Layer: 0
   m_Name: Small_Thick_Beak_Finch
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MonoBehaviour:
   BeakClosedSprite: {fileID: 21300000, guid: 44601857749fe7d4ab589bf301872fee, type: 3}
   BeakOpenSprite: {fileID: 21300000, guid: 94aad1cabe573fc4cbd740ab43df9510, type: 3}
   seed: {fileID: 0}
+--- !u!114 &-8411678081835655428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725966084353273191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27cbf060cab4ab4db6e28f242869d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 0
