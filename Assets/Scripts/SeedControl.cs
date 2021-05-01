@@ -68,7 +68,24 @@ public class SeedControl : MonoBehaviour
         if (state == FALLING)
         {
             rigidbody2D.gravityScale = 1;
-            this.finch.GetComponent<FinchBeakControl>().seed = null;
+            try
+            {
+                this.finch.GetComponent<FinchBeakControl>().seed = null;
+            }
+            catch
+            {
+
+            }
+            try
+            {
+                this.finch.GetComponent<NPCMovementScript>().hasSeed = false;
+                this.finch.GetComponent<NPCMovementScript>().targetSeed = null;
+            }
+            catch
+            {
+
+            }
+            
             this.finch = null;
         }
         //Debug.Log("UPDATE STATE!\nState " + state + ", timeToFall " + timeToFall);

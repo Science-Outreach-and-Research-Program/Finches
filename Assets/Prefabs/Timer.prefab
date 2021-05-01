@@ -93,3 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextStepPrefab: {fileID: 7595983208384038428, guid: a80927f5ad68af34683801b7825eca09, type: 3}
+  _largeNPCPrefab: {fileID: 4007990741391610863, guid: b2a5e8a9d850d2548b708f6140b86fc1, type: 3}
+  _mediumNPCPrefab: {fileID: 6208520578579717952, guid: 42a2a1161eec0f5419d346d25a87d4d8, type: 3}
+  _smallNPCPrefab: {fileID: 5158534593314561538, guid: f76643f91179ab642b13de217df1e7fc, type: 3}

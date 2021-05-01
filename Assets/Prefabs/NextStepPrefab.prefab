@@ -120,19 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5373062657101783770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3879154826079117519, guid: b4e42b3fb6440be448fea1b6570bdf8c, type: 3}
-        m_TargetAssemblyTypeName: TimeControl, Assembly-CSharp
-        m_MethodName: LoadRoundTwoSameFinch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &430828141851561388
 GameObject:
   m_ObjectHideFlags: 0

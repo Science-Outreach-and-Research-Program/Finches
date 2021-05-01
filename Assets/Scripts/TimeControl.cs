@@ -8,7 +8,11 @@ public class TimeControl : MonoBehaviour
     private float timeRemaining;
     private Text timeText;
     private bool isRunning;
+    private int quota;
     public GameObject nextStepPrefab;
+    public GameObject _largeNPCPrefab;
+    public GameObject _mediumNPCPrefab;
+    public GameObject _smallNPCPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +21,7 @@ public class TimeControl : MonoBehaviour
         timeText = GetComponent<Text>();
         timeText.text = formatTime(timeRemaining);
         isRunning = true;
+        quota = 3;
     }
 
     // Update is called once per frame
@@ -32,7 +37,8 @@ public class TimeControl : MonoBehaviour
             {
                 timeRemaining = 0;
                 isRunning = false;
-                StopPlay();
+                StopPlay("Finch");
+                StopPlay("NPC");
                 ShowResults();
             }
             timeText.text = formatTime(timeRemaining);
@@ -40,39 +46,49 @@ public class TimeControl : MonoBehaviour
         
     }
 
-    void StopPlay()
+    void StopPlay(string tag)
     {
-        GameObject playerFinch = GameObject.FindWithTag("Finch"); //there should be exactly one Finch active
-        // Deactivate all control scripts
-        MonoBehaviour[] scripts = playerFinch.GetComponents<MonoBehaviour>();
-        foreach(MonoBehaviour s in scripts)
+        GameObject finch = GameObject.FindWithTag(tag); //there should be at most one active
+        if (finch)
         {
-            s.enabled = false;
+            // Deactivate all control scripts
+            MonoBehaviour[] scripts = finch.GetComponents<MonoBehaviour>();
+            foreach (MonoBehaviour s in scripts)
+            {
+                s.enabled = false;
+            }
         }
+        
     }
 
     void ShowResults()
     {
+        SceneLoaderScript sceneLoaderScript = GameObject.Find("RoundManager").GetComponent<SceneLoaderScript>();
         // Get score
         GameObject playerNest = GameObject.Find("PlayerNest");
         int score =  playerNest.GetComponent<NestControl>().GetScore();
-        Debug.Log(score);
+        string message = "";
         // Create UI message with score
-        string message = "You collected " + score + " seeds.";
+        if (score >= quota)
+        {
+            message = "You collected enough seeds, you are thriving on this island!";
+            sceneLoaderScript.SetIsland(_largeNPCPrefab);
+        }
+        else
+        {
+            message = "You didn't collect enough seeds, so you must migrate to another island!";
+            sceneLoaderScript.SetIsland(_mediumNPCPrefab,1f,3f,1f);
+        }
         GameObject roundOneCanvas = GameObject.Find("Canvas");
         // Fix this hacky positioning later
         GameObject nextStep = Instantiate(nextStepPrefab, new Vector3(0, 100, 0), Quaternion.identity) as GameObject;
         nextStep.GetComponentInChildren<Text>().text = message;
         nextStep.transform.SetParent(roundOneCanvas.transform, false);
         // Give option to continue
+        Button continueButton = nextStep.GetComponentInChildren<Button>();
+        continueButton.onClick.AddListener(delegate { sceneLoaderScript.LoadNext(); });
     }
 
-    public void LoadRoundTwoSameFinch()
-    {
-        string currFinch = GameObject.FindGameObjectWithTag("Finch").name;
-        GameObject.Find("RoundManager").GetComponent<SceneLoaderScript>().LoadRoundTwo(currFinch);
-
-    }
 
     string formatTime(float raw)
     {

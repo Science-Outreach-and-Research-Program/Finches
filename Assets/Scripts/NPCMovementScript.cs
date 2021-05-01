@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCMovementScript : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private GameObject targetSeed;
+    public GameObject targetSeed;
     public bool hasSeed;
     public float speed;
     public GameObject nest;
@@ -19,6 +19,7 @@ public class NPCMovementScript : MonoBehaviour
         speed = 5f;
         findTargetSeed();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        nest = GameObject.Find("NPCNest");
     }
 
     // Update is called once per frame
