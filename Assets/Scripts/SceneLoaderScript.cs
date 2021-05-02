@@ -116,6 +116,7 @@ public class SceneLoaderScript : MonoBehaviour
             bushControl.largeSpawnRate = _largeSpawnRate;
             bushControl.mediumSpawnRate = _mediumSpawnRate;
             bushControl.smallSpawnRate = _smallSpawnRate;
+            bushControl.state = BushControl.RATES_SET;
         }
         catch
         {

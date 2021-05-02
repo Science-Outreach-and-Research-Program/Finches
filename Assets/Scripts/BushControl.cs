@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BushControl : MonoBehaviour
 {
+    public const int LOADED = 0;    // bush loaded into scene, but rates have not been set
+    public const int RATES_SET = 1; // rates have been set, but bush is empty
+    public const int READY = 2;     // bush has its initial seeds, and is ready for play
+
     private const float spawnRangeHor = 2f;
     private const float spawnRangeVer = 1.5f;
     private const int maxSeeds = 5;
@@ -16,43 +20,47 @@ public class BushControl : MonoBehaviour
     public float largeSpawnRate;
     public float mediumSpawnRate;
     public float smallSpawnRate;
-    
+    public int state;
 
     // Start is called before the first frame update
     void Start()
     {
-        //spawnRangeHor = 2f;
-        //spawnRangeVer = 1.5f;
-        //maxSeeds = 5;
         currSeeds = 0;
         seeds = new GameObject[maxSeeds];
-        for (var i = 0; i < maxSeeds; i++)
-        {
-            seeds[i] = spawnSeed();
-        }
-        timeToSpawn = 3;
+        timeToSpawn = 2.5f;
+        state = LOADED;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currSeeds < maxSeeds)
+        if (state == READY)
         {
-            timeToSpawn -= Time.deltaTime;
-            if (timeToSpawn < 0)
+            if (currSeeds < maxSeeds)
             {
-                for (var i = 0; i < maxSeeds; i++)
+                timeToSpawn -= Time.deltaTime;
+                if (timeToSpawn < 0)
                 {
-                    if (seeds[i] == null)
+                    for (var i = 0; i < maxSeeds; i++)
                     {
-                        seeds[i] = spawnSeed();
-                        break;
+                        if (seeds[i] == null)
+                        {
+                            seeds[i] = spawnSeed();
+                            break;
+                        }
                     }
+                    timeToSpawn = 2.5f;
                 }
-                timeToSpawn = 3f;
             }
         }
-        
+        else if (state == RATES_SET)
+        {
+            for (var i = 0; i < maxSeeds; i++)
+            {
+                seeds[i] = spawnSeed();
+            }
+            state = READY;
+        }
     }
 
     private GameObject spawnSeed()
@@ -60,8 +68,21 @@ public class BushControl : MonoBehaviour
         float spawnX = transform.position.x + Random.Range(-spawnRangeHor, spawnRangeHor);
         float spawnY = transform.position.y + Random.Range(-spawnRangeVer, spawnRangeVer);
         currSeeds++;
-        // add in random seed type here
-        return Instantiate(largeSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+
+        float seedTypeRNG = Random.Range(0f, largeSpawnRate + mediumSpawnRate + smallSpawnRate);
+        Debug.Log("Seed RNG: " + seedTypeRNG);
+        if (seedTypeRNG < largeSpawnRate)
+        {
+            return Instantiate(largeSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+        }
+        else if (seedTypeRNG < largeSpawnRate + mediumSpawnRate)
+        {
+            return Instantiate(mediumSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+        }
+        else
+        {
+            return Instantiate(smallSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);
+        }
     }
 
     public void removeSeed(GameObject seed)
