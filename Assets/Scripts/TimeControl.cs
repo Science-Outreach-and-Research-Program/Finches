@@ -21,7 +21,7 @@ public class TimeControl : MonoBehaviour
         timeText = GetComponent<Text>();
         timeText.text = formatTime(timeRemaining);
         isRunning = true;
-        quota = 3;
+        quota = 12;
     }
 
     // Update is called once per frame
@@ -64,6 +64,7 @@ public class TimeControl : MonoBehaviour
     void ShowResults()
     {
         SceneLoaderScript sceneLoaderScript = GameObject.Find("RoundManager").GetComponent<SceneLoaderScript>();
+        string currRound = sceneLoaderScript.GetActiveSceneName();
         // Get score
         GameObject playerNest = GameObject.Find("PlayerNest");
         int score =  playerNest.GetComponent<NestControl>().GetScore();
@@ -76,8 +77,24 @@ public class TimeControl : MonoBehaviour
         }
         else
         {
-            message = "You didn't collect enough seeds, so you must migrate to another island!";
-            sceneLoaderScript.SetIsland(_mediumNPCPrefab,2f,7f,1f);
+            if (currRound == "RoundOne")
+            {
+                message = "You didn't collect enough seeds, so you must migrate to another island!";
+            }
+            else if (currRound == "RoundTwo")
+            {
+                message = "You didn't collect enough seeds, so you failed to survive!";
+            }
+            string playerFinch = sceneLoaderScript.GetActiveFinchName();
+            if (playerFinch == "Large_Beak_Finch" || playerFinch == "Medium_Beak_Finch")
+            {
+                sceneLoaderScript.SetIsland(_mediumNPCPrefab, 2f, 7f, 1f);
+            }
+            else
+            {
+                sceneLoaderScript.SetIsland(_smallNPCPrefab, 1f, 2f, 17f);
+            }
+            
         }
         GameObject roundOneCanvas = GameObject.Find("Canvas");
         // Fix this hacky positioning later

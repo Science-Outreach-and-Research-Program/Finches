@@ -134,4 +134,13 @@ public class SceneLoaderScript : MonoBehaviour
         StartCoroutine(LoadScene(sceneName));
     }
 
+    public string GetActiveFinchName()
+    {
+        return _playerFinch;
+    }
+
+    public string GetActiveSceneName()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 }

@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 389761114}
   - component: {fileID: 389761113}
   m_Layer: 5
-  m_Name: StartCanvas
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -359,8 +359,8 @@ Canvas:
   m_GameObject: {fileID: 389761112}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1981287753}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -369,7 +369,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_TargetDisplay: 0
 --- !u!224 &389761116
 RectTransform:
@@ -385,7 +385,7 @@ RectTransform:
   - {fileID: 76945657}
   - {fileID: 1730350990}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -426,8 +426,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00060272217, y: 83.42804}
-  m_SizeDelta: {x: 432.61, y: 166.86}
+  m_AnchoredPosition: {x: -0.0007324219, y: 83.42804}
+  m_SizeDelta: {x: 474.21, y: 166.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232887151
 MonoBehaviour:
@@ -502,7 +502,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 83.429}
-  m_SizeDelta: {x: 532.6125, y: 266.86}
+  m_SizeDelta: {x: 574.2149, y: 266.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552323690
 MonoBehaviour:
@@ -539,26 +539,28 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Discussion
 
-    1. Which seeds were abundant in the first round? Was
-    your finch able to collect enough seeds to stay on the island? Why or why not?
+    1. Which seeds were abundant in the first round? Was your
+    finch able to collect enough seeds to stay on the island? Why or why not?
 
-    
 
     2.
     Which seeds were found in the second round? Of what species was the other finch?
     Why would you expect or not expect to see that species on that island?
 
-    
 
     3.
-    After many generations, which species would you expect to see on islands with
-    large seeds, and which species would you expect to see on islands with small
-    seeds? Explain your answer.
+    Were you able to survive the second round? What made survival easier? What made
+    it harder?
 
-    
 
-    4. This simulation focused on differences
-    in beaks. What other variations do you think could impact a finch''s survival?'
+    4. After many generations, which species would you expect to
+    see on islands with large seeds, and which species would you expect to see on
+    islands with small seeds? Explain your answer.
+
+
+    5. This simulation focused
+    on differences in beaks. What other variations do you think could impact a finch''s
+    survival?'
 --- !u!222 &1552323691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -668,7 +670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1981287751
 GameObject:
@@ -722,7 +724,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoundTwo.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Conclusion.unity
+    guid: d9f026dbf4c6c1b4ea78fbb5b5a38640
   m_configObjects: {}
