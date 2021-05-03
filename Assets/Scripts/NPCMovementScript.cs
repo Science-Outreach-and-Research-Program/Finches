@@ -11,12 +11,12 @@ public class NPCMovementScript : MonoBehaviour
     public GameObject nest;
     public Sprite BeakClosedSprite;
     public Sprite BeakOpenSprite;
-    public static readonly Vector3 offset = new Vector3(1.5f, -0.08f, 0f);
+    public static readonly Vector3 offset = new Vector3(0.75f, -0.04f, 0f);
     // Start is called before the first frame update
     void Start()
     {
         hasSeed = false;
-        speed = 5f;
+        speed = 3f;
         findTargetSeed();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         nest = GameObject.Find("NPCNest");
@@ -25,11 +25,12 @@ public class NPCMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!hasSeed)
+        if (!hasSeed) // go to seed
         {
             if (targetSeed == null || targetSeed.GetComponent<SeedControl>().state != SeedControl.IN_BUSH)
             {
                 findTargetSeed();
+                spriteRenderer.sprite = BeakOpenSprite; // need to open beak if seed fell out by itself!
             }
             else
             {
@@ -38,7 +39,7 @@ public class NPCMovementScript : MonoBehaviour
                 // move sprite towards the target location
                 transform.position = Vector3.MoveTowards(transform.position, targetSeed.transform.position - offset, step);
 
-                if (Vector3.Distance(transform.position + offset, targetSeed.transform.position) < 1)
+                if (Vector3.Distance(transform.position + offset, targetSeed.transform.position) < .25)
                 {
                     spriteRenderer.sprite = BeakClosedSprite;
 
@@ -51,14 +52,14 @@ public class NPCMovementScript : MonoBehaviour
                 }
             }
         }
-        else
+        else // back to nest
         {
             float step = speed * Time.deltaTime;
 
             // move sprite towards the target location
             Vector3 nestOffset = new Vector3(0f, 2f, 0f);
             transform.position = Vector3.MoveTowards(transform.position, nest.transform.position + nestOffset - offset, step);
-            if (Vector3.Distance(transform.position + offset, nest.transform.position + nestOffset) < 1)
+            if (Vector3.Distance(transform.position + offset, nest.transform.position + nestOffset) < .25)
             {
                 spriteRenderer.sprite = BeakOpenSprite;
                 targetSeed.GetComponent<SeedControl>().SetFinch(null, Vector3.zero);
@@ -70,20 +71,31 @@ public class NPCMovementScript : MonoBehaviour
     void findTargetSeed()
     {
         GameObject[] seeds = GameObject.FindGameObjectsWithTag("Seed");
-        GameObject closestSeed = null;
-        float closestDistance = float.PositiveInfinity;
+        GameObject bestSeed = null;
+        float bestSeedScore = float.PositiveInfinity;
+        int beakSize = gameObject.GetComponent<BeakSize>().size;
         foreach (GameObject seed in seeds)
         {
             if (seed.GetComponent<SeedControl>().state == SeedControl.IN_BUSH)
             {
-                float distance = Vector3.Distance(transform.position + offset, seed.transform.position);
-                if (distance < closestDistance)
+                // sizeDiff | score multiplier
+                // ---------+-----------
+                // 0        | 2
+                // 1        | 3
+                // 2        | 4
+                // a seed one size off would have to be 33% closer than a seed of the right size to be chosen
+
+                int seedSize = seed.GetComponent<SeedControl>().size;
+                int sizeDiff = Mathf.Abs(seedSize - beakSize);
+                float distance = Vector3.Distance(nest.transform.position, seed.transform.position); //change to distance to nest
+                float seedScore = distance * (2f + sizeDiff);
+                if (seedScore < bestSeedScore)
                 {
-                    closestSeed = seed;
-                    closestDistance = distance;
+                    bestSeed = seed;
+                    bestSeedScore = seedScore;
                 }
             }
         }
-        this.targetSeed = closestSeed;
+        this.targetSeed = bestSeed;
     }
 }

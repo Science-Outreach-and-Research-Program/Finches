@@ -8,8 +8,8 @@ public class BushControl : MonoBehaviour
     public const int RATES_SET = 1; // rates have been set, but bush is empty
     public const int READY = 2;     // bush has its initial seeds, and is ready for play
 
-    private const float spawnRangeHor = 2f;
-    private const float spawnRangeVer = 1.5f;
+    private const float spawnRangeHor = 1f;
+    private const float spawnRangeVer = 0.75f;
     private const int maxSeeds = 5;
     private float timeToSpawn;
     private int currSeeds;

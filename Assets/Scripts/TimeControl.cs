@@ -17,7 +17,7 @@ public class TimeControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeRemaining = 10f;
+        timeRemaining = 40f;
         timeText = GetComponent<Text>();
         timeText.text = formatTime(timeRemaining);
         isRunning = true;
@@ -77,7 +77,7 @@ public class TimeControl : MonoBehaviour
         else
         {
             message = "You didn't collect enough seeds, so you must migrate to another island!";
-            sceneLoaderScript.SetIsland(_mediumNPCPrefab,1f,3f,1f);
+            sceneLoaderScript.SetIsland(_mediumNPCPrefab,2f,7f,1f);
         }
         GameObject roundOneCanvas = GameObject.Find("Canvas");
         // Fix this hacky positioning later
