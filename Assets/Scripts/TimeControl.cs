@@ -8,16 +8,16 @@ public class TimeControl : MonoBehaviour
     private float timeRemaining;
     private Text timeText;
     private bool isRunning;
-    private int quota;
+    public int quota;
     public GameObject nextStepPrefab;
     public GameObject _largeNPCPrefab;
     public GameObject _mediumNPCPrefab;
     public GameObject _smallNPCPrefab;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        timeRemaining = 40f;
+        timeRemaining = 10f;
         timeText = GetComponent<Text>();
         timeText.text = formatTime(timeRemaining);
         isRunning = true;
@@ -69,8 +69,13 @@ public class TimeControl : MonoBehaviour
         GameObject playerNest = GameObject.Find("PlayerNest");
         int score =  playerNest.GetComponent<NestControl>().GetScore();
         string message = "";
+        if (currRound == "PracticeRound")
+        {
+            message = "You collected " + score + " seeds in this practice mode! Now you'll move to an island with mostly large seeds. Meet the target number of seeds in order to survive!";
+            sceneLoaderScript.SetIsland(null, 7f, 2f, 2f);
+        }
         // Create UI message with score
-        if (score >= quota)
+        else if (score >= quota)
         {
             message = "You collected enough seeds, you are thriving on this island!";
             sceneLoaderScript.SetIsland(_largeNPCPrefab);
@@ -92,15 +97,15 @@ public class TimeControl : MonoBehaviour
             }
             else
             {
-                sceneLoaderScript.SetIsland(_smallNPCPrefab, 1f, 2f, 17f);
+                sceneLoaderScript.SetIsland(_smallNPCPrefab, 1f, 2f, 7f);
             }
             
         }
-        GameObject roundOneCanvas = GameObject.Find("Canvas");
+        GameObject roundCanvas = GameObject.Find("Canvas");
         // Fix this hacky positioning later
         GameObject nextStep = Instantiate(nextStepPrefab, new Vector3(0, 100, 0), Quaternion.identity) as GameObject;
         nextStep.GetComponentInChildren<Text>().text = message;
-        nextStep.transform.SetParent(roundOneCanvas.transform, false);
+        nextStep.transform.SetParent(roundCanvas.transform, false);
         // Give option to continue
         Button continueButton = nextStep.GetComponentInChildren<Button>();
         continueButton.onClick.AddListener(delegate { sceneLoaderScript.LoadNext(); });

@@ -929,7 +929,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: large
+          m_StringArgument: practice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2131857249}
@@ -941,7 +941,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RoundOne
+          m_StringArgument: PracticeRound
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1392605705
@@ -1255,7 +1255,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: large
+          m_StringArgument: practice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2131857249}
@@ -1267,7 +1267,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RoundOne
+          m_StringArgument: PracticeRound
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1633284841
@@ -1552,7 +1552,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: large
+          m_StringArgument: practice
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2131857249}
@@ -1564,7 +1564,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RoundOne
+          m_StringArgument: PracticeRound
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1935320723

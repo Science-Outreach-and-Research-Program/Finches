@@ -84,7 +84,14 @@ public class SceneLoaderScript : MonoBehaviour
     // called by Finch buttons on StartScene
     public void SetFirstIsland(string islandType)
     {
-        SetIsland(null,7f,2f,1f);
+        if (islandType == "large")
+            SetIsland(null, 7f, 2f, 2f);
+        else if (islandType == "medium")
+            SetIsland(null, 2f, 7f, 2f);
+        else if (islandType == "small")
+            SetIsland(null, 2f, 2f, 7f);
+        else
+            SetIsland(null, 1f, 1f, 1f);
     }
 
     // called by TimeControl if not changing islands

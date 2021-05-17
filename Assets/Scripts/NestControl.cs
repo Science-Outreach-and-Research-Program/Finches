@@ -7,13 +7,16 @@ public class NestControl : MonoBehaviour
 {
     //public Text score;
     private int count;
+    private int target;
     private TextMesh scoreDisplay;
     // Start is called before the first frame update
     void Start()
     {
         count = 0;
+        GameObject timer = GameObject.Find("Timer");
+        target = timer.GetComponent<TimeControl>().quota;
         scoreDisplay = GetComponentInChildren<TextMesh>();
-        scoreDisplay.text = "Seeds: " + count;
+        scoreDisplay.text = "Seeds: " + count + "\nTarget: " + target;
         // score.text = "Seeds: " + count;
     }
 
@@ -40,7 +43,7 @@ public class NestControl : MonoBehaviour
             }
             //GetComponent<CapsuleCollider2D>().isTrigger = false;
             
-            scoreDisplay.text = "Seeds: " + count;
+            scoreDisplay.text = "Seeds: " + count + "\nTarget: " + target;
             //score.text = "Seeds: " + count;
         }
 
