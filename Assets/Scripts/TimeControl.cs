@@ -17,11 +17,11 @@ public class TimeControl : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        timeRemaining = 10f;
+        timeRemaining = 45f;
         timeText = GetComponent<Text>();
         timeText.text = formatTime(timeRemaining);
         isRunning = true;
-        quota = 12;
+        quota = 8;
     }
 
     // Update is called once per frame
@@ -72,7 +72,7 @@ public class TimeControl : MonoBehaviour
         if (currRound == "PracticeRound")
         {
             message = "You collected " + score + " seeds in this practice mode! Now you'll move to an island with mostly large seeds. Meet the target number of seeds in order to survive!";
-            sceneLoaderScript.SetIsland(null, 7f, 2f, 2f);
+            sceneLoaderScript.SetFirstIsland("large");
         }
         // Create UI message with score
         else if (score >= quota)
@@ -93,11 +93,11 @@ public class TimeControl : MonoBehaviour
             string playerFinch = sceneLoaderScript.GetActiveFinchName();
             if (playerFinch == "Large_Beak_Finch" || playerFinch == "Medium_Beak_Finch")
             {
-                sceneLoaderScript.SetIsland(_mediumNPCPrefab, 2f, 7f, 1f);
+                sceneLoaderScript.SetIsland(_mediumNPCPrefab, 2f, 17f, 1f);
             }
             else
             {
-                sceneLoaderScript.SetIsland(_smallNPCPrefab, 1f, 2f, 7f);
+                sceneLoaderScript.SetIsland(_smallNPCPrefab, 1f, 2f, 17f);
             }
             
         }

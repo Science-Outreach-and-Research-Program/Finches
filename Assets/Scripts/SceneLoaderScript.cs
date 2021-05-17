@@ -85,11 +85,11 @@ public class SceneLoaderScript : MonoBehaviour
     public void SetFirstIsland(string islandType)
     {
         if (islandType == "large")
-            SetIsland(null, 7f, 2f, 2f);
+            SetIsland(null, 17f, 2f, 2f);
         else if (islandType == "medium")
-            SetIsland(null, 2f, 7f, 2f);
+            SetIsland(null, 2f, 17f, 2f);
         else if (islandType == "small")
-            SetIsland(null, 2f, 2f, 7f);
+            SetIsland(null, 2f, 2f, 17f);
         else
             SetIsland(null, 1f, 1f, 1f);
     }

@@ -10,7 +10,7 @@ public class BushControl : MonoBehaviour
 
     private const float spawnRangeHor = 1f;
     private const float spawnRangeVer = 0.75f;
-    private const int maxSeeds = 6;
+    private const int maxSeeds = 8;
     private float timeToSpawn;
     private int currSeeds;
     private GameObject[] seeds;
@@ -27,7 +27,7 @@ public class BushControl : MonoBehaviour
     {
         currSeeds = 0;
         seeds = new GameObject[maxSeeds];
-        timeToSpawn = 1.5f;
+        timeToSpawn = 1.25f;
         state = LOADED;
     }
 
@@ -49,7 +49,7 @@ public class BushControl : MonoBehaviour
                             break;
                         }
                     }
-                    timeToSpawn = 2.5f;
+                    timeToSpawn = 1.5f;
                 }
             }
         }

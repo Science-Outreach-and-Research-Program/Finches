@@ -11,7 +11,8 @@ public class NPCMovementScript : MonoBehaviour
     public GameObject nest;
     public Sprite BeakClosedSprite;
     public Sprite BeakOpenSprite;
-    public static readonly Vector3 offset = new Vector3(0.75f, -0.04f, 0f);
+    public Vector3 offset;
+    public Vector3 nestOffset;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class NPCMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (!hasSeed) // go to seed
         {
             if (targetSeed == null || targetSeed.GetComponent<SeedControl>().state != SeedControl.IN_BUSH)
@@ -49,6 +51,7 @@ public class NPCMovementScript : MonoBehaviour
                     Debug.Log("calling SeedControl.UpdateState");
 
                     hasSeed = true;
+                    nestOffset = new Vector3(Random.Range(-.5f, .5f), 2f, 0f);
                 }
             }
         }
@@ -57,7 +60,7 @@ public class NPCMovementScript : MonoBehaviour
             float step = speed * Time.deltaTime;
 
             // move sprite towards the target location
-            Vector3 nestOffset = new Vector3(0f, 2f, 0f);
+            
             transform.position = Vector3.MoveTowards(transform.position, nest.transform.position + nestOffset - offset, step);
             if (Vector3.Distance(transform.position + offset, nest.transform.position + nestOffset) < .25)
             {

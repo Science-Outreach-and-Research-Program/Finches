@@ -30,13 +30,19 @@ public class SeedControl : MonoBehaviour
         if (finch)
         {
             int sizeDiff = Mathf.Abs(this.size - finch.GetComponent<BeakSize>().size);
-            float timeToFall = (Random.Range(2.50f, 3.50f) - sizeDiff * 1.7f);
+            float timeToFall;
+            if (sizeDiff == 0)
+                timeToFall = Random.Range(5f, 10f);
+            else if (sizeDiff == 1)
+                timeToFall = Random.Range(.8f, 1.8f);
+            else
+                timeToFall = Random.Range(.2f, .5f);
             if (timeToFall < 0) timeToFall = 0;
             // sizeDiff | timeToFall
             // ---------+-----------
-            // 0        | 2.50 - 3.50
+            // 0        | 5 - 10
             // 1        | 0.80 - 1.80
-            // 2        | 0 - 0.10
+            // 2        | 0.2 - 0.5
             UpdateState(IN_BEAK, timeToFall);
         }
         else
