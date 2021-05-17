@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: eeba73138f42266479efa90e7d857b60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94aad1cabe573fc4cbd740ab43df9510, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -100,8 +100,9 @@ MonoBehaviour:
   hasSeed: 0
   speed: 0
   nest: {fileID: 0}
-  BeakClosedSprite: {fileID: 21300000, guid: bf5a90dc15cffd541bbfc7b92f6d71b6, type: 3}
-  BeakOpenSprite: {fileID: 21300000, guid: eeba73138f42266479efa90e7d857b60, type: 3}
+  BeakClosedSprite: {fileID: 21300000, guid: 44601857749fe7d4ab589bf301872fee, type: 3}
+  BeakOpenSprite: {fileID: 21300000, guid: 94aad1cabe573fc4cbd740ab43df9510, type: 3}
+  offset: {x: 0.75, y: 0, z: 0}
 --- !u!114 &2798997807078755393
 MonoBehaviour:
   m_ObjectHideFlags: 0
