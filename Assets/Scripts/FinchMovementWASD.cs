@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FinchMovementWASD : MonoBehaviour
 {
+    public GameObject joystick;
     public float speed;
     // Start is called before the first frame update
     void Start()
     {
         speed = 5f;
+        joystick = GameObject.Find("FixedJoystick");
     }
 
     // Update is called once per frame

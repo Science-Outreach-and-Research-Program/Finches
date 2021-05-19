@@ -8,6 +8,13 @@ public class FinchBeakControl : MonoBehaviour
     public Sprite BeakClosedSprite;
     public Sprite BeakOpenSprite;
     public GameObject seed;
+    public GameObject joybutton;
+
+    private int state;
+    private const int OPEN = 0;
+    private const int RELEASE = 1;
+    private const int CLOSE = 2;
+    private const int GRAB = 3;
 
     public Vector3 offset;
 
@@ -25,9 +32,18 @@ public class FinchBeakControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Space key was pressed.");
+            state = GRAB;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("Space key was released.");
+            state = RELEASE;
+        }
+
+        if (state == GRAB)
+        {
             spriteRenderer.sprite = BeakClosedSprite;
 
-            
             GameObject[] seeds = GameObject.FindGameObjectsWithTag("Seed");
             GameObject closestSeed = null;
             float closestDistance = .5f;
@@ -42,7 +58,6 @@ public class FinchBeakControl : MonoBehaviour
                         closestDistance = distance;
                     }
                 }
-                
             }
             this.seed = closestSeed;
             if (seed)
@@ -57,11 +72,10 @@ public class FinchBeakControl : MonoBehaviour
             {
                 Debug.Log("No valid seed detected");
             }
+            state = CLOSE;
         }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Debug.Log("Space key was released.");
+        else if (state == RELEASE)
+        {    
             spriteRenderer.sprite = BeakOpenSprite;
 
             if (seed)
@@ -69,6 +83,7 @@ public class FinchBeakControl : MonoBehaviour
                 // seed.GetComponent<SeedControl>().UpdateState(SeedControl.FALLING, 0);
                 seed.GetComponent<SeedControl>().SetFinch(null, Vector3.zero);
             }
+            state = OPEN;
         }
     }
 }
