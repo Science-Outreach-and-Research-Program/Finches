@@ -34,14 +34,14 @@ public class SeedControl : MonoBehaviour
             if (sizeDiff == 0)
                 timeToFall = Random.Range(5f, 10f);
             else if (sizeDiff == 1)
-                timeToFall = Random.Range(.8f, 1.8f);
+                timeToFall = Random.Range(.6f, 1.6f);
             else
                 timeToFall = Random.Range(.2f, .5f);
             if (timeToFall < 0) timeToFall = 0;
             // sizeDiff | timeToFall
             // ---------+-----------
-            // 0        | 5 - 10
-            // 1        | 0.80 - 1.80
+            // 0        | 5.0 - 10.0
+            // 1        | 0.6 - 1.6
             // 2        | 0.2 - 0.5
             UpdateState(IN_BEAK, timeToFall);
         }
