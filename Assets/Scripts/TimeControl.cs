@@ -77,14 +77,17 @@ public class TimeControl : MonoBehaviour
         // Create UI message with score
         else if (score >= quota)
         {
-            message = "You collected enough seeds, you are thriving on this island!";
+            if (currRound == "RoundOne")
+                message = "You collected enough seeds, you are thriving on this island! Next, you will try to meet your target again while another finch feeds at the same time.";
+            else
+                message = "You collected enough seeds and managed to survive!";
             sceneLoaderScript.SetIsland(_largeNPCPrefab);
         }
         else
         {
             if (currRound == "RoundOne")
             {
-                message = "You didn't collect enough seeds, so you must migrate to another island!";
+                message = "You didn't collect enough seeds, so you must migrate to another island! There might be better seeds there, but other finches as well!";
             }
             else if (currRound == "RoundTwo")
             {

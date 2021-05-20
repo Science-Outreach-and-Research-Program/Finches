@@ -17,7 +17,7 @@ public class NPCMovementScript : MonoBehaviour
     void Start()
     {
         hasSeed = false;
-        speed = 3f;
+        speed = 5f;
         findTargetSeed();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         nest = GameObject.Find("NPCNest");
