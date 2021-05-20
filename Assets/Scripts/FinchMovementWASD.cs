@@ -10,7 +10,6 @@ public class FinchMovementWASD : MonoBehaviour
     void Start()
     {
         speed = 5f;
-        joystick = GameObject.Find("FixedJoystick");
     }
 
     // Update is called once per frame
