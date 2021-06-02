@@ -34,11 +34,7 @@ public class SeedControl : MonoBehaviour
             if (sizeDiff == 0)
                 timeToFall = Random.Range(5f, 10f);
             else if (sizeDiff == 1)
-<<<<<<< HEAD
-                timeToFall = Mathf.Sqrt(Random.Range(.5f, 1.4f));
-=======
                 timeToFall = Random.Range(.6f, 1.6f);
->>>>>>> 5a00e625e128217c4ae080d0bf9b2dc61d572f53
             else
                 timeToFall = Random.Range(.2f, .5f);
             if (timeToFall < 0) timeToFall = 0;
