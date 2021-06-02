@@ -12,7 +12,7 @@ public class DragDropControl : MonoBehaviour
     public GameObject largeFinchMatch;
     public GameObject mediumFinchMatch;
     public GameObject smallFinchMatch;
-    private float hitboxSize = 40f;
+    private float hitboxSize = 1.2f;
 
     public bool matched = false;
 
@@ -40,7 +40,9 @@ public class DragDropControl : MonoBehaviour
         float distanceLarge = Vector3.Distance(transform.position, largeFinchMatch.transform.position);
         float distanceMedium = Vector3.Distance(transform.position, mediumFinchMatch.transform.position);
         float distanceSmall = Vector3.Distance(transform.position, smallFinchMatch.transform.position);
-
+        Debug.Log(distanceLarge);
+        Debug.Log(distanceMedium);
+        Debug.Log(distanceSmall);
         // could be more elegant, but that would take more dev time
         string message = "";
         if (distanceLarge < Math.Min(distanceSmall, distanceMedium) && distanceLarge < hitboxSize)
