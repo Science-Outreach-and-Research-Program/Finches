@@ -16,7 +16,7 @@ public class SceneLoaderScript : MonoBehaviour
     void Start()
     {
         _enemyFinch = null;
-        currSceneIndex = 0;
+        currSceneIndex = 1;
     }
 
     IEnumerator LoadScene()
