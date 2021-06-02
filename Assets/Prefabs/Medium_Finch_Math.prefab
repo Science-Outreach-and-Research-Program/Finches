@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2072398982056978038
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320300728476203160, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589290654473235886, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Name
+      value: Medium_Finch_Math
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057766195063816831, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b843edfa1687271489ca5f479787685e, type: 3}
+    - target: {fileID: 4265028835142491169, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265028835142491169, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566092996425496705, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Text
+      value: "Geospiza fortis (Medium Ground Finch) - It\u2019s not as large as the
+        Geospiza magnirostris, but not as small as the Geospiza parvula. It\u2019s
+        just right."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566092996425496705, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043867007731172278, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043867007731172278, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -160
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
