@@ -1290,11 +1290,11 @@ MonoBehaviour:
     do not pick up enough seeds, you may have to move to another region with different
     seeds.
 
-    Select a finch to begin. You will start with a matching activity
-    and practice round.
+    Select a finch to begin. You will start with a practice round.
 
 
-    Move: WASD
+    Move:
+    WASD
 
     Close Beak: Hold SPACE
 
