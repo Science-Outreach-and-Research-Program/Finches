@@ -8,5 +8,6 @@ public class SetStartScene : MonoBehaviour
     public void LoadStartScene()
     {
         SceneManager.LoadScene("StartScene");
+        Debug.Log("THERE ARE NO EASTER EGGS HERE. GO AWAY.");
     }
 }

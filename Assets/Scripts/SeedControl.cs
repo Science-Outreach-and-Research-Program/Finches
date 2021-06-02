@@ -134,7 +134,7 @@ public class SeedControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Nest")
         {
-            Debug.Log("(Seed) Trigger entered with speed: " + rigidbody2D.velocity.y);
+            //Debug.Log("(Seed) Trigger entered with speed: " + rigidbody2D.velocity.y);
             //GetComponent<CapsuleCollider2D>().isTrigger = false;
         }
     }

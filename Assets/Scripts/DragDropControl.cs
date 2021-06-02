@@ -30,7 +30,7 @@ public class DragDropControl : MonoBehaviour
     public void OnMouseDown()
     {
         isDragging = true;
-        Debug.Log("start drag");
+        //Debug.Log("start drag");
     }
 
     public void OnMouseUp()
@@ -40,9 +40,9 @@ public class DragDropControl : MonoBehaviour
         float distanceLarge = Vector3.Distance(transform.position, largeFinchMatch.transform.position);
         float distanceMedium = Vector3.Distance(transform.position, mediumFinchMatch.transform.position);
         float distanceSmall = Vector3.Distance(transform.position, smallFinchMatch.transform.position);
-        Debug.Log(distanceLarge);
-        Debug.Log(distanceMedium);
-        Debug.Log(distanceSmall);
+        //Debug.Log(distanceLarge);
+        //Debug.Log(distanceMedium);
+        //Debug.Log(distanceSmall);
         // could be more elegant, but that would take more dev time
         string message = "";
         if (distanceLarge < Math.Min(distanceSmall, distanceMedium) && distanceLarge < hitboxSize)

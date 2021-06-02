@@ -48,7 +48,7 @@ public class NPCMovementScript : MonoBehaviour
                     GameObject bush = GameObject.Find("Bush");
                     bush.GetComponent<BushControl>().removeSeed(targetSeed);
                     targetSeed.GetComponent<SeedControl>().SetFinch(gameObject, offset);
-                    Debug.Log("calling SeedControl.UpdateState");
+                    //Debug.Log("calling SeedControl.UpdateState");
 
                     hasSeed = true;
                     nestOffset = new Vector3(Random.Range(-.5f, .5f), 2f, 0f);

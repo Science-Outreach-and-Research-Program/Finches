@@ -70,7 +70,7 @@ public class BushControl : MonoBehaviour
         currSeeds++;
 
         float seedTypeRNG = Random.Range(0f, largeSpawnRate + mediumSpawnRate + smallSpawnRate);
-        Debug.Log("Seed RNG: " + seedTypeRNG);
+        //Debug.Log("Seed RNG: " + seedTypeRNG);
         if (seedTypeRNG < largeSpawnRate)
         {
             return Instantiate(largeSeed, new Vector3(spawnX, spawnY, 0f), Quaternion.identity);

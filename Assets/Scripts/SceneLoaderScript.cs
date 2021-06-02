@@ -31,7 +31,7 @@ public class SceneLoaderScript : MonoBehaviour
         }
 
         GameObject[] finches = GameObject.FindGameObjectsWithTag("Finch");
-        Debug.Log(finches.Length);
+        //Debug.Log(finches.Length);
         foreach (GameObject f in finches)
         {
             if (f.name != _playerFinch)
@@ -59,7 +59,7 @@ public class SceneLoaderScript : MonoBehaviour
         }
 
         GameObject[] finches = GameObject.FindGameObjectsWithTag("Finch");
-        Debug.Log(finches.Length);
+        //Debug.Log(finches.Length);
         foreach (GameObject f in finches)
         {
             if (f.name != _playerFinch)

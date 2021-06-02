@@ -31,12 +31,12 @@ public class FinchBeakControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Space key was pressed.");
+            //Debug.Log("Space key was pressed.");
             state = GRAB;
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            Debug.Log("Space key was released.");
+            //Debug.Log("Space key was released.");
             state = RELEASE;
         }
 
@@ -66,11 +66,11 @@ public class FinchBeakControl : MonoBehaviour
                 bush.GetComponent<BushControl>().removeSeed(seed);
                 // seed.GetComponent<SeedControl>().UpdateState(SeedControl.IN_BEAK, 100);
                 seed.GetComponent<SeedControl>().SetFinch(gameObject, offset);
-                Debug.Log("calling SeedControl.UpdateState");
+                //Debug.Log("calling SeedControl.UpdateState");
             }
             else
             {
-                Debug.Log("No valid seed detected");
+                //Debug.Log("No valid seed detected");
             }
             state = CLOSE;
         }
