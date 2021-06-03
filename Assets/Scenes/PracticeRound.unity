@@ -1202,8 +1202,9 @@ MonoBehaviour:
   m_Text: 'Practice Round
 
 
-    Move using the WASD keys. Move to a seed and hold
-    SPACE to pick it up. Return to your nest and release SPACE to drop the seed in.'
+    Move using the WASD or Arrow keys. Move to a seed
+    and hold SPACE to pick it up. Return to your nest and release SPACE to drop the
+    seed in.'
 --- !u!222 &1612443261
 CanvasRenderer:
   m_ObjectHideFlags: 0

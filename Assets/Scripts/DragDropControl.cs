@@ -103,6 +103,6 @@ public class DragDropControl : MonoBehaviour
             }
             smallFinchMatch.transform.Find("Feedback").GetComponentInChildren<Text>().text = message;
         }
-        Debug.Log(message);
+        //Debug.Log(message);
     }
 }
