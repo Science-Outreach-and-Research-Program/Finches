@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -335,6 +335,38 @@ PrefabInstance:
     - target: {fileID: 1049344625399062254, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878590453137308247, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 2878590453137308247, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702906295884759522, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963771253172562505, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963771253172562505, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963771253172562505, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963771253172562505, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960206938972885979, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a23237dfaeeb2347aa5bdea90120451, type: 3}
@@ -754,8 +786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00060272217, y: 130.75}
-  m_SizeDelta: {x: 432.61, y: 67.7}
+  m_AnchoredPosition: {x: 0, y: 132.5}
+  m_SizeDelta: {x: 440, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556913693
 MonoBehaviour:
@@ -770,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1001,6 +1033,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 959607250}
     m_Modifications:
+    - target: {fileID: 1563971805456952881, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563971805456952881, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 3691263939730539216, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
       propertyPath: m_Text
       value: 
@@ -1096,6 +1136,18 @@ PrefabInstance:
     - target: {fileID: 4383853699601582728, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5629387842591426493, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954970204805922351, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287329810473047428, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c294a55bf7fa61446b2ad87415cbd97d, type: 3}
@@ -1323,6 +1375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seed_Match
       objectReference: {fileID: 0}
+    - target: {fileID: 4490588641820174153, guid: 10739e4a1fcfb5249a30cf415b2b97ed, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 8059711907554190296, guid: 10739e4a1fcfb5249a30cf415b2b97ed, type: 3}
       propertyPath: m_Text
       value: This heavy seed provides lots of food energy, but has a thick outer
@@ -1343,6 +1399,14 @@ PrefabInstance:
     - target: {fileID: 8059711907554190296, guid: 10739e4a1fcfb5249a30cf415b2b97ed, type: 3}
       propertyPath: m_FontData.m_BestFit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059711907554190296, guid: 10739e4a1fcfb5249a30cf415b2b97ed, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059711907554190296, guid: 10739e4a1fcfb5249a30cf415b2b97ed, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8059711907554190296, guid: 10739e4a1fcfb5249a30cf415b2b97ed, type: 3}
       propertyPath: m_FontData.m_AlignByGeometry
@@ -1743,6 +1807,30 @@ PrefabInstance:
     - target: {fileID: 2143209623070617792, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265028835142491169, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265028835142491169, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5620828508984593471, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043867007731172278, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6739275923579463572, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961350442481300909, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c2891c6723485409fdcd4b704d033b, type: 3}
@@ -2206,7 +2294,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
@@ -2216,19 +2304,23 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.15
   m_Text: 'Welcome to the Darwin''s Finches Simulation!
 
 
     Today, you will fight
-    for survival on the Galapagos Islands. Your goal in each round is to collect
+    for survival on the Galapagos Islands.
+
+    Your goal in each round is to collect
     as many seeds as you can, sometimes directly competing against other finches.
     If your finch''s beak is unsuited for a seed, it will be harder to hold. If you
     do not pick up enough seeds, you may have to move to another region with different
     seeds.
 
 
-    Read the descriptions of each seed type and finch species, then
+    Read the descriptions of each seed type and finch species,
+
+    then
     drag each seed to the finch you believe is best suited for feeding on it.
 
 '
