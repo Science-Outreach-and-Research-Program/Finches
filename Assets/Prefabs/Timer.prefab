@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -3428.6165, y: -2651.7368}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 180, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &219297877271534906
 CanvasRenderer:
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b03dc3a07d3dd3429e1479c5864df56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quota: 0
   nextStepPrefab: {fileID: 7595983208384038428, guid: a80927f5ad68af34683801b7825eca09, type: 3}
   _largeNPCPrefab: {fileID: 4007990741391610863, guid: b2a5e8a9d850d2548b708f6140b86fc1, type: 3}
   _mediumNPCPrefab: {fileID: 6208520578579717952, guid: 42a2a1161eec0f5419d346d25a87d4d8, type: 3}
